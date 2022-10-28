@@ -4,10 +4,9 @@
             <h1>
                 <%= title %>
             </h1>
-            <!-- ------------------------ -->
-            <!-- FIX THE ADD BUTTON BELOW -->
-            <!-- ------------------------ -->
-            <a href="" class="btn btn-primary" role="button">
+            
+            <!-- Add button fixed links to the add contents page  -->
+            <a href="/books/add" class="btn btn-primary" role="button">
                 <i class="fas fa-plus-circle"></i> Add a Book</a>
             <br>
             <table class="table table-bordered table-striped table-hover">
@@ -42,18 +41,18 @@
                             <%= books[count].price %>
                         </td>
                         <td class="text-center col-1">
-                            <!-- ------------------------ -->
-                            <!-- ADD the EDIT BUTTON HERE -->
-                            <!-- ------------------------ -->
+                            <!-- Edit button links to book detail page and the id of the book they want to edit -->
+                            <a href="/books/edit/<%= books[count]._id %>" class="btn btn-primary" role="button">
+                                <i class="fas fa-pencil-alt fa"></i> Edit Book</a>
                         </td>
                         <td class="text-center col-1">
-                            <!-- ------------------------ -->
-                            <!-- ADD the DELETE BUTTON HERE -->
-                            <!-- ------------------------ -->
+                            <!-- Delete Button links the id of book to be deleted to pass through router -->
+                            <a href="/books/delete/<%= books[count]._id %>" class="btn btn-danger" role="button">
+                                <i class="fas fa-trash-alt fa"></i> Delete Book</a>
                         </td>
                     </tr>
                     <% } %>
-            </table>
+            </table><br><br><br>
         </div>
     </div>
 </main>
