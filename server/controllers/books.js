@@ -1,3 +1,9 @@
+/*File: controllers/books.js
+Author Name: Kiruthika Varathanthan
+Student ID: 301200412
+Web App Name: COMP229-Midterm-301200412
+Date: 2022-10-28*/
+
 // define the book model
 import booksModel from '../models/books.js';
 
