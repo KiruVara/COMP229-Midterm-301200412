@@ -64,7 +64,7 @@ export function displayEditPage(req, res, next) {
             res.end(err);
         }
         //redners page with criteria
-        res.render('index', { title: 'Edit Book', page: 'books/edit', book: Book });
+        res.render('index', { title: 'Edit Book', page: 'books/edit', book: books });
     });
 
 }
@@ -75,7 +75,7 @@ export function processEditPage(req, res, next) {
     let id = req.params.id;
 
     let newBook = booksModel({
-        _id: req.body.id,
+        _id: id,
         name: req.body.name,
         author: req.body.author,
         published: req.body.published,
